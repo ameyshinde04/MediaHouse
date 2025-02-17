@@ -1,0 +1,366 @@
+body {
+    /* font-family: 'Poppins', sans-serif; */
+    margin: 0;
+    padding: 0;
+    background-color: #E5E7EB;
+    color: #1E3A8A;
+}
+header {
+    background-color: #1E3A8A;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+header .logo img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Space between search box and links */
+    align-items: center;
+    width: 70%;
+}
+
+nav .nav-links {
+    display: flex;
+    gap: 1.5rem; /* Space between navigation links */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align search box content to the left */
+    margin-right: auto; /* Push the search box to the left */
+    margin-left: 2rem; /* Add some spacing from the edge of the header */
+}
+
+.search-box input {
+    width: 350px; /* Adjust the width of the search box */
+    padding: 0.5rem 2.5rem; /* Padding for the embedded icon */
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-image: url('search.png');
+    background-repeat: no-repeat;
+    background-position: 0.8rem center; /* Icon position */
+    background-size: 1rem; /* Icon size */
+    padding-left: 2.5rem; /* Space for the icon */
+}
+
+.search-box input::placeholder {
+    color: #999; /* Placeholder text color */
+}
+
+.hero {
+    background-color: #1687f9;
+    color: white;
+    text-align: center;
+    padding: 3rem 1rem;
+}
+.hero h1 {
+    font-size: 2.5rem;
+}
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+.trending {
+    padding: 2rem;
+    margin-bottom: 3rem;
+}
+.trending h2 {
+    font-size: 1.8rem;
+    color: #1E3A8A;
+}
+.grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin-bottom: 1rem; /* Add space between cards */
+    border-left: 8px solid #1E3A8A; /* Add left border */
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 1rem;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content h3 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #1E3A8A;
+}
+
+.card-content p {
+    font-size: 1rem;
+    margin: 0.5rem 0 0;
+    color: #4B5563;
+}
+
+.chatbot-icon {
+    position: fixed;
+    bottom: 80px; /* Increased to avoid overlapping the footer */
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #1E3A8A;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensures it stays above other elements */
+}
+.chatbot {
+    position: fixed;
+    bottom: 150px; /* Moved higher for better spacing */
+    right: 20px;
+    width: 450px; /* Changed from 300px to 400px to make the chatbot wider */
+    height: 450px;
+    background-color: white;
+    border: 2px solid #1E3A8A;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+
+.chatbot-header {
+    background-color: #1E3A8A;
+    color: white;
+    padding: 0.8rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.chatbot-messages {
+    flex-grow: 1;
+    padding: 0.5rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.chatbot-input {
+    display: flex;
+    border-top: 1px solid #E5E7EB;
+}
+
+.chatbot-input textarea {
+    flex-grow: 1;
+    border: none;
+    padding: 0.8rem;
+    font-size: 1rem;
+    resize: none; /* Prevent manual resizing */
+    height: auto; /* Allow it to grow */
+    max-height: 150px; /* Set a max height to prevent overflow */
+    overflow-y: auto; /* Enable scrolling if needed */
+    border-radius: 4px;
+}
+
+.chatbot-input button {
+    background-color: #1687f9;
+    border: none;
+    color: white;
+    padding: 0.8rem;
+    cursor: pointer;
+}
+
+.message-bot {
+    display: flex;
+    align-items: flex-start;
+    margin: 0.5rem 0;
+}
+
+.message-bot img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.message-bot .text {
+    background-color: #E5E7EB;
+    color: #1E3A8A;
+    padding: 0.5rem;
+    border-radius: 8px;
+    max-width: 80%;
+}
+
+.message-user {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin: 0.5rem 0;
+}
+
+.message-user img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.message-user .text {
+    background-color: #1687f9;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 8px;
+    max-width: 80%;
+}
+
+/* Responsive Navbar */
+@media (max-width: 1250px) {
+    nav {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Align links to the left */
+        width: 100%; /* Take full width */
+    }
+
+    .nav-links {
+        flex-direction: row; /* Stack links vertically */
+        gap: 0.5rem; /* Reduce spacing */
+    }
+
+    .search-box {
+        width: 70%; /* Make the search bar responsive */
+        margin-left: 0; /* Reset margins */
+        margin-right: 0;
+        padding-bottom: 1rem; /* Add space below search box */
+        justify-content: center; /* Center the search box */
+    }
+
+    .search-box input {
+        width: 90%; /* Fit within screen width */
+    }
+}
+
+/* Make chatbot fully responsive */
+@media (max-width: 1024px) {
+    .chatbot {
+        width: 80%; /* Take most of the screen width */
+        height: 300px; /* Reduce height slightly */
+        bottom: 120px;
+        right: 10%;
+    }
+}
+
+@media (max-width: 768px) {
+    .chatbot {
+        width: 80%; /* Full width on smaller screens */
+        height: 250px;
+        bottom: 100px;
+        right: 5%;
+    }
+
+    .chatbot-icon {
+        width: 45px; /* Smaller chatbot button */
+        height: 45px;
+        font-size: 1.1rem;
+    }
+
+    .chatbot-header {
+        font-size: 1rem; /* Reduce header size */
+        padding: 0.6rem;
+    }
+
+    .chatbot-messages {
+        padding: 0.3rem; /* Less padding */
+    }
+
+    .chatbot-input input {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    .chatbot-input button {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+}
+
+/* Prevent chat messages from overflowing */
+.chatbot-messages {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Make chatbot icon adjust dynamically */
+@media (max-width: 480px) {
+    .chatbot-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+        bottom: 60px;
+        right: 10px;
+    }
+
+    .chatbot {
+        height: 320px;
+        width: 95%;
+        bottom: 90px;
+        right: 2%;
+    }
+
+    .chatbot-input input {
+        font-size: 0.8rem;
+    }
+
+    .chatbot-input button {
+        font-size: 0.8rem;
+    }
+}
+
+footer {
+    background-color: #1E3A8A;
+    color: white;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    position: relative; /* Avoid fixed footer if cards extend below viewport */
+    /* margin-top: 2rem; Ensure space between last card and footer */
+}

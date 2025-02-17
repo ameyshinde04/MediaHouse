@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrendSphere - Discover Trends</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="media_house.png" alt="MediaHouse Logo"> MediaHouse
+        </div>
+        <nav>
+            <div class="search-box">
+                <input type="text" placeholder="Search for topic..." id="search-input">
+            </div>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">Latest Trends</a>
+                <a href="#">Categories</a>
+                <a href="#">Contact</a>
+            </div>
+        </nav>
+                      
+    </header>
+
+    <div class="hero">
+        <h1>Welcome to MediaHouse</h1>
+        <p>Your one-stop destination for global trends and news</p>
+    </div>
+
+    <section class="trending">
+        <h2>Trending Topics</h2>
+        <div id="trending-container"></div>
+    </section>
+
+    <div class="chatbot-icon" onclick="toggleChatbot()">💬</div>
+
+    <div class="chatbot">
+        <div class="chatbot-header">Media Assist</div>
+        <div class="chatbot-messages"></div>
+        <div class="chatbot-input">
+            <textarea id="chatbot-textarea" placeholder="Type your question here..." rows="1"></textarea>
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 MediaHouse. All Rights Reserved.
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
